@@ -416,7 +416,7 @@ async def main(args):
             "tipoDeSangre",
             "cedula",
             "tipoDeEmpleado",
-            "correo"
+            "correo",
             "timestamp",
         ]
         if faber_agent.cred_type == CRED_FORMAT_INDY:
