@@ -81,10 +81,12 @@ class FaberAgent(AriesAgent):
         if aip == 10:
             # define attributes to send for credential
             self.cred_attrs[cred_def_id] = {
-                "name": "Alice Smith",
-                "date": "2018-05-28",
-                "degree": "Maths",
-                "birthdate_dateint": birth_date.strftime(birth_date_format),
+                "nombre": "Jonathan",
+                "empresa": "Ceiba",
+                "cedula": "123456789",
+                "tipoDeEmpleado": "contratista",
+                "tipoDeSangre": "A+",
+                "correo": "jonathan@ceiba.com.co",
                 "timestamp": str(int(time.time())),
             }
 
@@ -108,11 +110,14 @@ class FaberAgent(AriesAgent):
         elif aip == 20:
             if cred_type == CRED_FORMAT_INDY:
                 self.cred_attrs[cred_def_id] = {
-                    "name": "Alice Smith",
-                    "date": "2018-05-28",
-                    "degree": "Maths",
-                    "birthdate_dateint": birth_date.strftime(birth_date_format),
+                    "nombre": "Jonathan",
+                    "empresa": "Ceiba",
+                    "cedula": "123456789",
+                    "tipoDeEmpleado": "contratista",
+                    "tipoDeSangre": "A+",
+                    "correo": "jonathan@ceiba.com.co",
                     "timestamp": str(int(time.time())),
+                    
                 }
 
                 cred_preview = {
@@ -152,11 +157,13 @@ class FaberAgent(AriesAgent):
                                 "issuanceDate": "2020-01-01T12:00:00Z",
                                 "credentialSubject": {
                                     "type": ["PermanentResident"],
-                                    "givenName": "ALICE",
-                                    "familyName": "SMITH",
-                                    "gender": "Female",
-                                    "birthCountry": "Bahamas",
-                                    "birthDate": "1958-07-17",
+                                    "nombre": "Jonathan",
+                                    "empresa": "Ceiba",
+                                    "cedula": "123456789",
+                                    "tipoDeEmpleado": "contratista",
+                                    "tipoDeSangre": "A+",
+                                    "correo": "jonathan@ceiba.com.co",
+                                    "timestamp": str(int(time.time())),
                                 },
                             },
                             "options": {"proofType": SIG_TYPE_BLS},

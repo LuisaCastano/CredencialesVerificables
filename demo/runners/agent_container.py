@@ -1310,7 +1310,7 @@ async def test_main(
                 "tipoDeSangre",
                 "cedula",
                 "tipoDeEmpleado",
-                "correo"
+                "correo",
             ],
         )
         await alice_container.initialize()
