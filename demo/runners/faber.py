@@ -188,29 +188,18 @@ class FaberAgent(AriesAgent):
         if aip == 10:
             req_attrs = [
                 {
-                    "name": "name",
-                    "restrictions": [{"schema_name": "degree schema"}],
+                    "name": "nombre",
+                    "restrictions": [{"schema_name": "empleado schema"}],
                 },
                 {
-                    "name": "date",
-                    "restrictions": [{"schema_name": "degree schema"}],
+                    "name": "empresa",
+                    "restrictions": [{"schema_name": "empleado schema"}],
                 },
-            ]
-            if revocation:
-                req_attrs.append(
-                    {
-                        "name": "degree",
-                        "restrictions": [{"schema_name": "degree schema"}],
-                        "non_revoked": {"to": int(time.time() - 1)},
-                    },
-                )
-            else:
-                req_attrs.append(
-                    {
-                        "name": "degree",
-                        "restrictions": [{"schema_name": "degree schema"}],
-                    }
-                )
+                {
+                    "tipoDeEmpleado": "",
+                    "restrictions": [{"schema_name": "empleado schema"}],
+                },
+            ]            
             if SELF_ATTESTED:
                 # test self-attested claims
                 req_attrs.append(
@@ -219,14 +208,14 @@ class FaberAgent(AriesAgent):
             req_preds = [
                 # test zero-knowledge proofs
                 {
-                    "name": "birthdate_dateint",
-                    "p_type": "<=",
-                    "p_value": int(birth_date.strftime(birth_date_format)),
-                    "restrictions": [{"schema_name": "degree schema"}],
+                    "name": "cedula",
+                    "p_type": "==",
+                    "p_value": "123456789",
+                    "restrictions": [{"schema_name": "empleado schema"}],
                 }
             ]
             indy_proof_request = {
-                "name": "Proof of Education",
+                "name": "Prueba de validación de carnet",
                 "version": "1.0",
                 "requested_attributes": {
                     f"0_{req_attr['name']}_uuid": req_attr for req_attr in req_attrs
