@@ -249,7 +249,7 @@ if [ "$OSTYPE" = "msys" ]; then
 fi
 DOCKER=${DOCKER:-docker}
 
-$DOCKER run --add-host=host.docker.internal:host-gateway --name $AGENT --rm -it ${DOCKER_OPTS} \
+$DOCKER run --name $AGENT --rm -it ${DOCKER_OPTS} \
   --network=${DOCKER_NET} \
   -p 0.0.0.0:$AGENT_PORT_RANGE:$AGENT_PORT_RANGE \
   ${DOCKER_VOL} \
