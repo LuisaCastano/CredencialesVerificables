@@ -205,15 +205,6 @@ class FaberAgent(AriesAgent):
                 req_attrs.append(
                     {"name": "self_attested_thing"},
                 )
-            req_preds = [
-                # test zero-knowledge proofs
-                {
-                    "name": "cedula",
-                    "p_type": "==",
-                    "p_value": "123456789",
-                    "restrictions": [{"schema_name": "empleado schema"}],
-                }
-            ]
             indy_proof_request = {
                 "name": "Prueba de validación de carnet",
                 "version": "1.0",
