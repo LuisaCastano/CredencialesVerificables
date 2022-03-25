@@ -196,7 +196,7 @@ class FaberAgent(AriesAgent):
                     "restrictions": [{"schema_name": "empleado schema"}],
                 },
                 {
-                    "tipoDeEmpleado": "",
+                    "name": "tipoDeEmpleado",
                     "restrictions": [{"schema_name": "empleado schema"}],
                 },
             ]            
