@@ -211,9 +211,6 @@ class FaberAgent(AriesAgent):
                 "requested_attributes": {
                     f"0_{req_attr['name']}_uuid": req_attr for req_attr in req_attrs
                 },
-                "requested_predicates": {
-                    f"0_{req_pred['name']}_GE_uuid": req_pred for req_pred in req_preds
-                },
             }
 
             if revocation:
