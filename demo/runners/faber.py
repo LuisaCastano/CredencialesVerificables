@@ -206,10 +206,6 @@ class FaberAgent(AriesAgent):
                     {"name": "self_attested_thing"},
                 )
             req_preds = [
-                # test zero-knowledge proofs
-                {
-                
-                }
             ]
             indy_proof_request = {
                 "name": "Prueba de validación de carnet",
