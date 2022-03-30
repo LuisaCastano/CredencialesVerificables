@@ -52,7 +52,7 @@ class FaberAgent(AriesAgent):
             ident,
             http_port,
             admin_port,
-            prefix="Faber",
+            prefix="EPM",
             no_auto=no_auto,
             endorser_role=endorser_role,
             revocation=revocation,
@@ -362,7 +362,7 @@ class FaberAgent(AriesAgent):
 
 
 async def main(args):
-    faber_agent = await create_agent_with_args(args, ident="faber")
+    faber_agent = await create_agent_with_args(args, ident="epm")
 
     try:
         log_status(
