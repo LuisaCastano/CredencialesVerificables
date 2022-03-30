@@ -362,7 +362,7 @@ class FaberAgent(AriesAgent):
 
 
 async def main(args):
-    faber_agent = await create_agent_with_args(args, ident="faber")
+    faber_agent = await create_agent_with_args(args, ident="epm")
 
     try:
         log_status(
