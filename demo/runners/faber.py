@@ -52,7 +52,7 @@ class FaberAgent(AriesAgent):
             ident,
             http_port,
             admin_port,
-            prefix="Faber",
+            prefix="Epm",
             no_auto=no_auto,
             endorser_role=endorser_role,
             revocation=revocation,
