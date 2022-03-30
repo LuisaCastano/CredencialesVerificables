@@ -1270,7 +1270,7 @@ async def test_main(
         # initialize the containers
         faber_container = AgentContainer(
             genesis_txns=genesis,
-            ident="Faber.agent",
+            ident="Epm.agent",
             start_port=start_port,
             no_auto=no_auto,
             revocation=revocation,
