@@ -87,7 +87,7 @@ do
     continue
   ;;
   --bg)
-    if [ "${AGENT}" = "alice" ] || [ "${AGENT}" = "faber" ] || [ "${AGENT}" = "acme" ]; then
+    if [ "${AGENT}" = "alice" ] || [ "${AGENT}" = "epm" ] || [ "${AGENT}" = "acme" ]; then
       DOCKER_OPTS="-d"
       echo -e "\nRunning in ${AGENT} in the background. Note that you cannot use the command line console in this mode."
       echo To see the logs use: \"docker logs ${AGENT}\".
@@ -125,8 +125,8 @@ EOF
   ARGS="${ARGS:+$ARGS }$i"
 done
 
-if [ "$AGENT" = "faber" ]; then
-  AGENT_MODULE="faber"
+if [ "$AGENT" = "epm" ]; then
+  AGENT_MODULE="epm"
   AGENT_PORT=8020
   AGENT_PORT_RANGE=8020-8029
 elif [ "$AGENT" = "alice" ]; then
